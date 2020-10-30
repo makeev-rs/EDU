@@ -1,3 +1,0 @@
-informatika: 100 (л) 50 (пр) 20 (лаб).
-fizika: 30 (л)- 10 (лаб)
-fizkultura: - 30 (пр) -
