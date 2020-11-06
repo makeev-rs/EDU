@@ -19,8 +19,7 @@ class MyDate():
     def __str__(self):
         return "MyDate(%04d-%02d-%02d)" % (self.yearnum, self.monthnum, self.daynum)
 
-    # Первый, с декоратором @classmethod, должен извлекать число, месяц,
-    # год и преобразовывать их тип к типу «Число».
+    
     @classmethod
     def parse_datestr(cls, datestr):
         match = re.match(r'(\d{4})-(\d{2})-(\d{2})', datestr)  # ([12]\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])
@@ -29,8 +28,7 @@ class MyDate():
         else:
             raise ValueError("date format " + datestr + " doesn't match pattern YYYY-MM-DD")
 
-    # Второй, с декоратором @staticmethod, должен проводить валидацию числа,
-    # месяца и года (например, месяц — от 1 до 12).
+    
     @staticmethod
     def verify_ymd(yearnum, monthnum, daynum):
         if not (yearnum >= 1000 and yearnum <= 2999):
